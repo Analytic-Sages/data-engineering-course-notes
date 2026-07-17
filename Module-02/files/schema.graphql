@@ -1,0 +1,10 @@
+type Transfer {
+  id: ID!          # Unique identifier for each transfer (usually transaction hash + log index)
+  from: String!    # Sender address
+  to: String!      # Recipient address
+  value: BigInt!   # Transfer amount
+  blockNumber: Int! 
+  txhash: String!
+  blockTimestamp: Int!
+  tokenAddress: String!
+}
