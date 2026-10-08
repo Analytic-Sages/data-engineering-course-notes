@@ -13,7 +13,7 @@ services:
   ingest:
     build:
       context: ../../
-      dockerfile: Module-01/Docker/Dockerfile
+      dockerfile: Docker-fundamentals/Docker/Dockerfile
     environment:
       DB_HOST: "db"
     depends_on:
