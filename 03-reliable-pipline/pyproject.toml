@@ -1,0 +1,12 @@
+[project]
+name = "reliable-pipeline"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "web3>=6.0",
+    "psycopg2-binary>=2.9",
+    "pyarrow>=25.0.1",
+    "google-cloud-storage>=3.17.1",
+    "python-dotenv>=1.2.4",
+    "google-cloud-bigquery>=3.46.2",
+]
