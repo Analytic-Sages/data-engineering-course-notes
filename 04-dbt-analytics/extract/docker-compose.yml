@@ -1,0 +1,29 @@
+# Module 6 – Extract: local PostgreSQL for swap data.
+# Matches the connection defaults used by dbt (profiles.yml) and Module 4.
+#
+#   docker compose up -d      # start
+#   docker compose ps         # check
+#   docker compose down -v    # stop AND wipe the data volume
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: curriculum-extract-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: blockchain_db
+    ports:
+      # Host 5432 -> container 5432; change the left side if 5432 is taken.
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d blockchain_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:
