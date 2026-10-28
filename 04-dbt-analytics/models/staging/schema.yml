@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_dex_swap
+    description: >
+      Cleaned and typed Uniswap V3 swap events from the raw pool_swaps table.
+    columns:
+      - name: tx_hash
+        description: Transaction hash (lowercase hex, 66 chars).
+        tests:
+          - not_null
+      - name: log_index
+        description: Log position within the transaction. With tx_hash forms the natural key.
+        tests:
+          - not_null
+      - name: pool_address
+        description: Uniswap V3 pool that emitted the Swap (lowercase hex).
+        tests:
+          - not_null
+      - name: block_number
+        description: Block number in which the swap was mined.
+        tests:
+          - not_null
+      - name: tx_index
+        description: Transaction index within the block.
+        tests:
+          - not_null
+      - name: sender
+        description: Address that initiated the swap (indexed param, lowercase).
+        tests:
+          - not_null
+      - name: recipient
+        description: Address that received the swap output (indexed param, lowercase).
+        tests:
+          - not_null
+      - name: amount0_raw
+        description: token0 units at wei scale, signed — raw truth, never scaled here.
+        tests:
+          - not_null
+      - name: amount1_raw
+        description: token1 units at wei scale, signed — raw truth, never scaled here.
+        tests:
+          - not_null
+      - name: amount0
+        description: amount0_raw scaled by token0 decimals (DAI = 18), signed.
+        tests:
+          - not_null
+      - name: amount1
+        description: amount1_raw scaled by token1 decimals (USDC = 6), signed.
+        tests:
+          - not_null
+      - name: sqrt_price_x96
+        description: Square root of the pool price after the swap, scaled by 2^96.
+        tests:
+          - not_null
+      - name: liquidity
+        description: In-range pool liquidity after the swap.
+        tests:
+          - not_null
+      - name: tick
+        description: Pool tick after the swap.
+        tests:
+          - not_null
+      - name: block_timestamp
+        description: UTC timestamp of the block in which this swap was mined (TIMESTAMPTZ).
+        tests:
+          - not_null
+        tests:
+          - not_null
