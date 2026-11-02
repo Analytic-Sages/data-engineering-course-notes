@@ -1,0 +1,1737 @@
+[0m23:21:49.677829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x725d2bf117f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x725d2cbb6420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x725d2c95f170>]}
+
+
+============================== 23:21:50.233015 | 70c1b721-1a48-4d4f-ac71-96d81352763e ==============================
+[0m23:21:50.233015 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m23:21:50.457918 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'target_path': 'None', 'log_format': 'default', 'printer_width': '80', 'static_parser': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'log_path': 'logs', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt run --profiles-dir . --project-dir .', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'introspect': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'partial_parse': 'True'}
+[0m23:21:50.464720 [debug] [MainThread]: Tracking: tracking
+[0m23:21:51.466916 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Credentials in profile "transformation", target "dev" invalid: '5432' is not of type 'integer'
+[0m23:21:51.468862 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.695727, "process_in_blocks": "0", "process_kernel_time": 0.701154, "process_mem_max_rss": "134964", "process_out_blocks": "0", "process_user_time": 4.358073}
+[0m23:21:51.472663 [debug] [MainThread]: Command `dbt run` failed at 23:21:51.472393 after 2.70 seconds
+[0m23:21:51.474324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x725d2bf13110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x725d2bf13dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x725d2becb950>]}
+[0m23:21:51.476289 [debug] [MainThread]: Flushing usage events
+[0m23:21:52.924898 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:24:01.638411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78514060fbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513faa9430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513fed5b80>]}
+
+
+============================== 23:24:01.726228 | 3da62d75-1d63-43cc-b55c-c5c6060911c9 ==============================
+[0m23:24:01.726228 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m23:24:01.734557 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'fail_fast': 'False', 'quiet': 'False', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt run --profiles-dir . --project-dir .', 'target_path': 'None', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'cache_selected_only': 'False', 'static_parser': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'debug': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'introspect': 'True', 'profiles_dir': '.', 'empty': 'False', 'warn_error': 'None', 'hints_enabled': 'True', 'partial_parse': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m23:24:01.738607 [debug] [MainThread]: Tracking: tracking
+[0m23:24:05.857430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78514236f050>]}
+[0m23:24:06.542217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513f215370>]}
+[0m23:24:06.546159 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:24:09.666107 [debug] [MainThread]: checksum: 3743cd5af7d605e622951bf78a3cc09f8907c940085aece08167c69270a51570, vars: {}, profile: transformation, target: dev, version: 1.13.0b1
+[0m23:24:09.702500 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:24:09.704200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513f0e79b0>]}
+[0m23:24:10.257942 [warn ] [MainThread]: [[33mWARNING[0m][DuplicateYAMLKeysDeprecation]: Deprecated functionality
+Duplicate key 'tests' in "<unicode string>", line 68, column 9 in file
+`models/staging/schema.yml`
+[0m23:24:10.268927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513e6fbf80>]}
+[0m23:24:38.111042 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fct_dex_trades' in the 'models' section of file 'models/marts/schema.yml'
+[0m23:24:45.363993 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_tx_hash.dc5e44e3a8' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.389673 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_log_index.bf5e98f8f3' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.451217 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_pool_address.a6a97f26c5' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.517347 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_block_number.2414e4037d' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.538868 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_sender.dea2924bf4' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.643500 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_recipient.970f1c65bc' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.655786 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_direction.d41da4bc90' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.656570 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.accepted_values_fct_dex_trades_direction__token0_to_token1__token1_to_token0.21d79da53e' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.685983 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_amount_in.44a514f3e3' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.704344 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_amount_out.b939f4d891' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:45.794743 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.transformation.not_null_fct_dex_trades_price_token1_per_token0.57e7cfcec2' (models/marts/schema.yml) depends on a node named 'fct_dex_trades' in package '' which was not found
+[0m23:24:54.678649 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.transformation.example
+[0m23:24:54.809510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513cb4dc10>]}
+[0m23:24:54.815045 [info ] [MainThread]: [HINT] Your parse is taking a long time. You can speed up your parsing with the new rust parser: https://docs.getdbt.com/reference/global-configs/parsing?utm_source=dbt-cli#opt-in-v2-parser
+[0m23:24:54.837923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'hint_view', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513cbb5460>]}
+[0m23:24:56.743125 [debug] [MainThread]: Wrote artifact WritableManifest to ./target/manifest.json
+[0m23:24:56.797565 [debug] [MainThread]: Wrote artifact SemanticManifest to ./target/semantic_manifest.json
+[0m23:24:57.109900 [debug] [MainThread]: Wrote artifact OsiDocument to ./target/osi_document.json
+[0m23:24:57.285265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513be67980>]}
+[0m23:24:57.303711 [info ] [MainThread]: Found 3 models, 24 data tests, 1 source, 477 macros
+[0m23:24:57.304719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513c727230>]}
+[0m23:24:57.346707 [info ] [MainThread]: 
+[0m23:24:57.348109 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:24:57.353279 [info ] [MainThread]: 
+[0m23:24:57.355713 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:24:57.427137 [debug] [ThreadPool]: Acquiring new postgres connection 'list_blockchain_db'
+[0m23:24:58.397482 [debug] [ThreadPool]: Using postgres connection "list_blockchain_db"
+[0m23:24:58.400602 [debug] [ThreadPool]: On list_blockchain_db: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "list_blockchain_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:24:58.404889 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:24:58.700416 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.295 seconds
+[0m23:24:58.709018 [debug] [ThreadPool]: On list_blockchain_db: Close
+[0m23:24:58.736703 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_blockchain_db, now list_blockchain_db_public)
+[0m23:24:58.771449 [debug] [ThreadPool]: Using postgres connection "list_blockchain_db_public"
+[0m23:24:58.779674 [debug] [ThreadPool]: On list_blockchain_db_public: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "list_blockchain_db_public"} */
+select
+      'blockchain_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'blockchain_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'blockchain_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+    union all
+    select distinct
+     'blockchain_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public'
+  
+[0m23:24:58.783017 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:24:59.905740 [debug] [ThreadPool]: SQL status: SELECT 0 in 1.123 seconds
+[0m23:24:59.961934 [debug] [ThreadPool]: On list_blockchain_db_public: ROLLBACK
+[0m23:24:59.977512 [debug] [ThreadPool]: On list_blockchain_db_public: Close
+[0m23:25:00.140054 [debug] [MainThread]: Using postgres connection "master"
+[0m23:25:00.175068 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:25:00.188142 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:25:00.740636 [debug] [MainThread]: SQL status: SELECT 0 in 0.553 seconds
+[0m23:25:00.770464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513f0c7fb0>]}
+[0m23:25:00.776505 [debug] [MainThread]: On master: ROLLBACK
+[0m23:25:00.796588 [debug] [MainThread]: On master: COMMIT
+[0m23:25:00.797342 [debug] [MainThread]: Using postgres connection "master"
+[0m23:25:00.805816 [debug] [MainThread]: On master: COMMIT
+[0m23:25:00.847199 [debug] [MainThread]: SQL status: COMMIT in 0.034 seconds
+[0m23:25:00.848513 [debug] [MainThread]: On master: Close
+[0m23:25:00.964478 [debug] [Thread-1 (]: Began running node model.transformation.stg_dex_swap
+[0m23:25:00.989081 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_dex_swap ................................ [RUN]
+[0m23:25:01.021710 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_blockchain_db_public, now model.transformation.stg_dex_swap)
+[0m23:25:01.022469 [debug] [Thread-1 (]: Began compiling node model.transformation.stg_dex_swap
+[0m23:25:01.199651 [debug] [Thread-1 (]: Writing injected SQL for node "model.transformation.stg_dex_swap"
+[0m23:25:01.256233 [debug] [Thread-1 (]: Began executing node model.transformation.stg_dex_swap
+[0m23:25:01.976242 [debug] [Thread-1 (]: Writing runtime sql for node "model.transformation.stg_dex_swap"
+[0m23:25:02.013438 [debug] [Thread-1 (]: Using postgres connection "model.transformation.stg_dex_swap"
+[0m23:25:02.033448 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.stg_dex_swap"} */
+
+  create view "blockchain_db"."public"."stg_dex_swap__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "blockchain_db"."public"."pool_swaps"
+
+),
+
+renamed as (
+
+    select
+        -- natural key (surrogate id stays in the raw layer only)
+        tx_hash,
+        log_index::integer              as log_index,
+
+        -- identifiers
+        pool_address,
+        block_number::bigint            as block_number,
+        tx_index::integer               as tx_index,
+        sender,
+        recipient,
+
+        -- decoded swap values — already typed by the extractor, cast only
+        amount0_raw::numeric(78, 0)     as amount0_raw,
+        amount1_raw::numeric(78, 0)     as amount1_raw,
+        amount0::numeric(78, 18)        as amount0,
+        amount1::numeric(78, 18)        as amount1,
+
+        -- pool state captured at swap time
+        sqrt_price_x96::numeric(78, 0)  as sqrt_price_x96,
+        liquidity::numeric(78, 0)       as liquidity,
+        tick::integer                   as tick,
+
+        -- timestamp → date grain (UTC)
+        block_timestamp
+    from source
+
+)
+select * from renamed
+  );
+[0m23:25:02.048915 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:25:02.490170 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.pool_swaps" does not exist
+LINE 9:     select * from "blockchain_db"."public"."pool_swaps"
+                          ^
+
+[0m23:25:02.507460 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: ROLLBACK
+[0m23:25:02.653673 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: Close
+[0m23:25:03.018030 [debug] [Thread-1 (]: Database Error in model stg_dex_swap (models/staging/stg_dex_swap.sql)
+  relation "public.pool_swaps" does not exist
+  LINE 9:     select * from "blockchain_db"."public"."pool_swaps"
+                            ^
+  compiled code at target/run/transformation/models/staging/stg_dex_swap.sql
+[0m23:25:03.265969 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3da62d75-1d63-43cc-b55c-c5c6060911c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513b31f0b0>]}
+[0m23:25:03.308054 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model public.stg_dex_swap ....................... [[31mERROR[0m in 2.12s]
+[0m23:25:03.427316 [debug] [Thread-1 (]: Finished running node model.transformation.stg_dex_swap
+[0m23:25:03.488893 [debug] [Thread-4 (]: Marking all children of 'model.transformation.stg_dex_swap' to be skipped because of status 'error'.  Reason: Database Error in model stg_dex_swap (models/staging/stg_dex_swap.sql)
+  relation "public.pool_swaps" does not exist
+  LINE 9:     select * from "blockchain_db"."public"."pool_swaps"
+                            ^
+  compiled code at target/run/transformation/models/staging/stg_dex_swap.sql.
+[0m23:25:03.510646 [debug] [Thread-1 (]: Began running node model.transformation.int_dex_swap
+[0m23:25:03.552788 [info ] [Thread-1 (]: 2 of 3 SKIP relation public.int_dex_swap ....................................... [[33mSKIP[0m]
+[0m23:25:03.607096 [debug] [Thread-1 (]: Finished running node model.transformation.int_dex_swap
+[0m23:25:03.630352 [debug] [Thread-1 (]: Began running node model.transformation.fct_dex_swap
+[0m23:25:03.636735 [info ] [Thread-1 (]: 3 of 3 SKIP relation public.fct_dex_swap ....................................... [[33mSKIP[0m]
+[0m23:25:03.660749 [debug] [Thread-1 (]: Finished running node model.transformation.fct_dex_swap
+[0m23:25:03.670563 [debug] [MainThread]: On master: COMMIT
+[0m23:25:03.672750 [debug] [MainThread]: Using postgres connection "master"
+[0m23:25:03.678397 [debug] [MainThread]: On master: COMMIT
+[0m23:25:03.688572 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:25:03.786222 [debug] [MainThread]: SQL status: COMMIT in 0.097 seconds
+[0m23:25:03.788525 [debug] [MainThread]: On master: Close
+[0m23:25:03.789448 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:25:03.792423 [debug] [MainThread]: Connection 'model.transformation.stg_dex_swap' was properly closed.
+[0m23:25:03.798026 [info ] [MainThread]: 
+[0m23:25:03.812942 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 6.44 seconds (6.44s).
+[0m23:25:03.828832 [debug] [MainThread]: Command end result
+[0m23:25:04.067859 [debug] [MainThread]: Wrote artifact WritableManifest to ./target/manifest.json
+[0m23:25:04.077338 [debug] [MainThread]: Wrote artifact SemanticManifest to ./target/semantic_manifest.json
+[0m23:25:04.089516 [debug] [MainThread]: Wrote artifact OsiDocument to ./target/osi_document.json
+[0m23:25:04.118693 [debug] [MainThread]: Wrote artifact RunExecutionResult to ./target/run_results.json
+[0m23:25:04.144200 [info ] [MainThread]: 
+[0m23:25:04.172850 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m23:25:04.188217 [info ] [MainThread]: 
+[0m23:25:04.221993 [error] [MainThread]: [[31mERROR[0m]: in model stg_dex_swap (models/staging/stg_dex_swap.sql)
+[0m23:25:04.251129 [error] [MainThread]:   Database Error in model stg_dex_swap (models/staging/stg_dex_swap.sql)
+  relation "public.pool_swaps" does not exist
+  LINE 9:     select * from "blockchain_db"."public"."pool_swaps"
+                            ^
+  compiled code at target/run/transformation/models/staging/stg_dex_swap.sql
+[0m23:25:04.263517 [info ] [MainThread]: 
+[0m23:25:04.289631 [info ] [MainThread]:   compiled code at target/compiled/transformation/models/staging/stg_dex_swap.sql
+[0m23:25:04.311390 [info ] [MainThread]: 
+[0m23:25:04.360169 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=2 NO-OP=0 REUSED=0 TOTAL=3
+[0m23:25:04.410197 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- DuplicateYAMLKeysDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m23:25:04.616977 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 58.214764, "process_in_blocks": "0", "process_kernel_time": 2.025839, "process_mem_max_rss": "149884", "process_out_blocks": "0", "process_user_time": 11.379552}
+[0m23:25:04.679430 [debug] [MainThread]: Command `dbt run` failed at 23:25:04.678992 after 58.28 seconds
+[0m23:25:04.720172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513f2151c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513cb4dc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78513b3d62a0>]}
+[0m23:25:04.803012 [debug] [MainThread]: Flushing usage events
+[0m23:25:07.194180 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:31:38.125913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2e457a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2d79a540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2cdd3b30>]}
+
+
+============================== 23:31:38.162957 | 2171b7ea-01f0-4fd7-a1ca-619791f998a4 ==============================
+[0m23:31:38.162957 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m23:31:38.175145 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --profiles-dir . --project-dir .', 'use_colors': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'empty': 'False', 'version_check': 'True', 'introspect': 'True', 'target_path': 'None', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '.', 'log_cache_events': 'False', 'log_format': 'default', 'partial_parse': 'True', 'debug': 'False', 'quiet': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'use_experimental_parser': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'printer_width': '80'}
+[0m23:31:38.175799 [debug] [MainThread]: Tracking: tracking
+[0m23:31:40.220807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bfbf0e0>]}
+[0m23:31:40.954812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bfbdc40>]}
+[0m23:31:40.960671 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:31:41.534609 [debug] [MainThread]: checksum: 3743cd5af7d605e622951bf78a3cc09f8907c940085aece08167c69270a51570, vars: {}, profile: transformation, target: dev, version: 1.13.0b1
+[0m23:31:42.303666 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:31:42.306228 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:31:42.309707 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:31:42.348002 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.transformation.example
+[0m23:31:42.391477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2cb765d0>]}
+[0m23:31:43.746523 [debug] [MainThread]: Wrote artifact WritableManifest to ./target/manifest.json
+[0m23:31:43.755119 [debug] [MainThread]: Wrote artifact SemanticManifest to ./target/semantic_manifest.json
+[0m23:31:43.852060 [debug] [MainThread]: Wrote artifact OsiDocument to ./target/osi_document.json
+[0m23:31:44.029692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bb79b50>]}
+[0m23:31:44.037077 [info ] [MainThread]: Found 3 models, 24 data tests, 1 source, 477 macros
+[0m23:31:44.043283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2afe5460>]}
+[0m23:31:44.066944 [info ] [MainThread]: 
+[0m23:31:44.070565 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:31:44.120605 [info ] [MainThread]: 
+[0m23:31:44.132319 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:31:44.260954 [debug] [ThreadPool]: Acquiring new postgres connection 'list_blockchain_db'
+[0m23:31:44.691525 [debug] [ThreadPool]: Using postgres connection "list_blockchain_db"
+[0m23:31:44.692376 [debug] [ThreadPool]: On list_blockchain_db: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "list_blockchain_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:31:44.693402 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:31:44.767229 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.074 seconds
+[0m23:31:44.776030 [debug] [ThreadPool]: On list_blockchain_db: Close
+[0m23:31:44.810644 [debug] [ThreadPool]: Acquiring new postgres connection 'list_blockchain_db_public'
+[0m23:31:44.863038 [debug] [ThreadPool]: Using postgres connection "list_blockchain_db_public"
+[0m23:31:44.868014 [debug] [ThreadPool]: On list_blockchain_db_public: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "list_blockchain_db_public"} */
+select
+      'blockchain_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'blockchain_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'blockchain_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+    union all
+    select distinct
+     'blockchain_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public'
+  
+[0m23:31:44.876704 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:31:45.102777 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.229 seconds
+[0m23:31:45.117434 [debug] [ThreadPool]: On list_blockchain_db_public: ROLLBACK
+[0m23:31:45.123266 [debug] [ThreadPool]: On list_blockchain_db_public: Close
+[0m23:31:45.203271 [debug] [MainThread]: Using postgres connection "master"
+[0m23:31:45.204315 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:31:45.205241 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:31:45.538450 [debug] [MainThread]: SQL status: SELECT 0 in 0.333 seconds
+[0m23:31:45.554620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bb50290>]}
+[0m23:31:45.563241 [debug] [MainThread]: On master: ROLLBACK
+[0m23:31:45.574512 [debug] [MainThread]: On master: COMMIT
+[0m23:31:45.594510 [debug] [MainThread]: Using postgres connection "master"
+[0m23:31:45.610157 [debug] [MainThread]: On master: COMMIT
+[0m23:31:45.621554 [debug] [MainThread]: SQL status: COMMIT in 0.008 seconds
+[0m23:31:45.632315 [debug] [MainThread]: On master: Close
+[0m23:31:45.724876 [debug] [Thread-1 (]: Began running node model.transformation.stg_dex_swap
+[0m23:31:45.764020 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_dex_swap ................................ [RUN]
+[0m23:31:45.775815 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_blockchain_db_public, now model.transformation.stg_dex_swap)
+[0m23:31:45.818750 [debug] [Thread-1 (]: Began compiling node model.transformation.stg_dex_swap
+[0m23:31:45.942091 [debug] [Thread-1 (]: Writing injected SQL for node "model.transformation.stg_dex_swap"
+[0m23:31:45.947290 [debug] [Thread-1 (]: Began executing node model.transformation.stg_dex_swap
+[0m23:31:46.368375 [debug] [Thread-1 (]: Writing runtime sql for node "model.transformation.stg_dex_swap"
+[0m23:31:46.394758 [debug] [Thread-1 (]: Using postgres connection "model.transformation.stg_dex_swap"
+[0m23:31:46.411569 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.stg_dex_swap"} */
+
+  create view "blockchain_db"."public"."stg_dex_swap__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "blockchain_db"."public"."pool_swaps"
+
+),
+
+renamed as (
+
+    select
+        -- natural key (surrogate id stays in the raw layer only)
+        tx_hash,
+        log_index::integer              as log_index,
+
+        -- identifiers
+        pool_address,
+        block_number::bigint            as block_number,
+        tx_index::integer               as tx_index,
+        sender,
+        recipient,
+
+        -- decoded swap values — already typed by the extractor, cast only
+        amount0_raw::numeric(78, 0)     as amount0_raw,
+        amount1_raw::numeric(78, 0)     as amount1_raw,
+        amount0::numeric(78, 18)        as amount0,
+        amount1::numeric(78, 18)        as amount1,
+
+        -- pool state captured at swap time
+        sqrt_price_x96::numeric(78, 0)  as sqrt_price_x96,
+        liquidity::numeric(78, 0)       as liquidity,
+        tick::integer                   as tick,
+
+        -- timestamp → date grain (UTC)
+        block_timestamp
+    from source
+
+)
+select * from renamed
+  );
+[0m23:31:46.413512 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:31:46.516840 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.103 seconds
+[0m23:31:46.533715 [debug] [Thread-1 (]: Using postgres connection "model.transformation.stg_dex_swap"
+[0m23:31:46.537460 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.stg_dex_swap"} */
+alter table "blockchain_db"."public"."stg_dex_swap__dbt_tmp" rename to "stg_dex_swap"
+[0m23:31:46.545501 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m23:31:46.839785 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: COMMIT
+[0m23:31:46.856358 [debug] [Thread-1 (]: Using postgres connection "model.transformation.stg_dex_swap"
+[0m23:31:46.863085 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: COMMIT
+[0m23:31:46.893182 [debug] [Thread-1 (]: SQL status: COMMIT in 0.019 seconds
+[0m23:31:46.975841 [debug] [Thread-1 (]: Applying DROP to: "blockchain_db"."public"."stg_dex_swap__dbt_backup"
+[0m23:31:47.084710 [debug] [Thread-1 (]: Using postgres connection "model.transformation.stg_dex_swap"
+[0m23:31:47.102590 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.stg_dex_swap"} */
+drop view if exists "blockchain_db"."public"."stg_dex_swap__dbt_backup" cascade
+[0m23:31:47.118875 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.008 seconds
+[0m23:31:47.166036 [debug] [Thread-1 (]: On model.transformation.stg_dex_swap: Close
+[0m23:31:47.245960 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2fe8e0c0>]}
+[0m23:31:47.247715 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_dex_swap ........................... [[32mCREATE VIEW[0m in 1.44s]
+[0m23:31:47.286691 [debug] [Thread-1 (]: Finished running node model.transformation.stg_dex_swap
+[0m23:31:47.334977 [debug] [Thread-1 (]: Began running node model.transformation.int_dex_swap
+[0m23:31:47.338207 [info ] [Thread-1 (]: 2 of 3 START sql view model public.int_dex_swap ................................ [RUN]
+[0m23:31:47.343993 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.transformation.stg_dex_swap, now model.transformation.int_dex_swap)
+[0m23:31:47.358827 [debug] [Thread-1 (]: Began compiling node model.transformation.int_dex_swap
+[0m23:31:47.376393 [debug] [Thread-1 (]: Writing injected SQL for node "model.transformation.int_dex_swap"
+[0m23:31:47.404443 [debug] [Thread-1 (]: Began executing node model.transformation.int_dex_swap
+[0m23:31:47.461296 [debug] [Thread-1 (]: Writing runtime sql for node "model.transformation.int_dex_swap"
+[0m23:31:47.479578 [debug] [Thread-1 (]: Using postgres connection "model.transformation.int_dex_swap"
+[0m23:31:47.480296 [debug] [Thread-1 (]: On model.transformation.int_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.int_dex_swap"} */
+
+  create view "blockchain_db"."public"."int_dex_swap__dbt_tmp"
+    
+    
+  as (
+    with swaps as (
+
+    select * from "blockchain_db"."public"."stg_dex_swap"
+
+),
+
+-- sqrt(price) in raw units: undo the x96 fixed-point scale with power(2, 96).
+-- The ::numeric cast keeps the division exact (an untyped power(2, 96) is
+-- double precision and would drag the whole ratio into float).
+priced as (
+
+    select
+        swaps.*,
+        sqrt_price_x96 / power(2::numeric, 96) as sqrt_price_ratio
+    from swaps
+
+)
+
+select
+    -- keys & context (pass-through)
+    tx_hash,
+    log_index,
+    block_number,
+    tx_index,
+    pool_address,
+    sender,
+    recipient,
+    block_timestamp
+
+    -- pool state at execution time (pass-through, useful context for marts)
+    liquidity,
+    tick,
+
+    -- 1. direction: which way did the trade go? (from the pool's signs)
+    case
+        when amount0_raw > 0 then 'token0_to_token1'
+        else 'token1_to_token0'
+    end                                                 as direction,
+
+    -- trader perspective: what was sold TO the pool, what was BOUGHT from it
+    case when amount0_raw > 0 then 'DAI' else 'USDC' end as token_in_symbol,
+    case when amount0_raw > 0 then 'USDC' else 'DAI' end as token_out_symbol,
+    case when amount0_raw > 0 then amount0 else amount1 end   as amount_in,
+    case when amount0_raw > 0 then -amount1 else -amount0 end as amount_out,
+
+    -- 2. price: token1 per token0 (USDC per DAI for the default pool) ≈ 1.0
+    sqrt_price_ratio
+        * sqrt_price_ratio
+        * power(10::numeric, 12)                       as price_token1_per_token0
+
+from priced
+  );
+[0m23:31:47.480922 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:31:47.625268 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.144 seconds
+[0m23:31:47.644638 [debug] [Thread-1 (]: Using postgres connection "model.transformation.int_dex_swap"
+[0m23:31:47.645889 [debug] [Thread-1 (]: On model.transformation.int_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.int_dex_swap"} */
+alter table "blockchain_db"."public"."int_dex_swap__dbt_tmp" rename to "int_dex_swap"
+[0m23:31:47.650622 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:31:47.658475 [debug] [Thread-1 (]: On model.transformation.int_dex_swap: COMMIT
+[0m23:31:47.661469 [debug] [Thread-1 (]: Using postgres connection "model.transformation.int_dex_swap"
+[0m23:31:47.664634 [debug] [Thread-1 (]: On model.transformation.int_dex_swap: COMMIT
+[0m23:31:47.674714 [debug] [Thread-1 (]: SQL status: COMMIT in 0.009 seconds
+[0m23:31:47.679835 [debug] [Thread-1 (]: Applying DROP to: "blockchain_db"."public"."int_dex_swap__dbt_backup"
+[0m23:31:47.680988 [debug] [Thread-1 (]: Using postgres connection "model.transformation.int_dex_swap"
+[0m23:31:47.681448 [debug] [Thread-1 (]: On model.transformation.int_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.int_dex_swap"} */
+drop view if exists "blockchain_db"."public"."int_dex_swap__dbt_backup" cascade
+[0m23:31:47.690570 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.009 seconds
+[0m23:31:47.692605 [debug] [Thread-1 (]: On model.transformation.int_dex_swap: Close
+[0m23:31:47.708220 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bb50f50>]}
+[0m23:31:47.709637 [info ] [Thread-1 (]: 2 of 3 OK created sql view model public.int_dex_swap ........................... [[32mCREATE VIEW[0m in 0.36s]
+[0m23:31:47.721951 [debug] [Thread-1 (]: Finished running node model.transformation.int_dex_swap
+[0m23:31:47.757621 [debug] [Thread-1 (]: Began running node model.transformation.fct_dex_swap
+[0m23:31:47.760609 [info ] [Thread-1 (]: 3 of 3 START sql table model public.fct_dex_swap ............................... [RUN]
+[0m23:31:47.763807 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.transformation.int_dex_swap, now model.transformation.fct_dex_swap)
+[0m23:31:47.770056 [debug] [Thread-1 (]: Began compiling node model.transformation.fct_dex_swap
+[0m23:31:47.799738 [debug] [Thread-1 (]: Writing injected SQL for node "model.transformation.fct_dex_swap"
+[0m23:31:47.820188 [debug] [Thread-1 (]: Began executing node model.transformation.fct_dex_swap
+[0m23:31:47.990781 [debug] [Thread-1 (]: Writing runtime sql for node "model.transformation.fct_dex_swap"
+[0m23:31:48.005056 [debug] [Thread-1 (]: Using postgres connection "model.transformation.fct_dex_swap"
+[0m23:31:48.006817 [debug] [Thread-1 (]: On model.transformation.fct_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.fct_dex_swap"} */
+
+  
+    
+
+  create  table "blockchain_db"."public"."fct_dex_swap__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * from "blockchain_db"."public"."int_dex_swap"
+  );
+  
+[0m23:31:48.020875 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:31:48.172968 [debug] [Thread-1 (]: SQL status: SELECT 7 in 0.162 seconds
+[0m23:31:48.247482 [debug] [Thread-1 (]: Using postgres connection "model.transformation.fct_dex_swap"
+[0m23:31:48.248182 [debug] [Thread-1 (]: On model.transformation.fct_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.fct_dex_swap"} */
+alter table "blockchain_db"."public"."fct_dex_swap__dbt_tmp" rename to "fct_dex_swap"
+[0m23:31:48.272825 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m23:31:48.279627 [debug] [Thread-1 (]: On model.transformation.fct_dex_swap: COMMIT
+[0m23:31:48.301763 [debug] [Thread-1 (]: Using postgres connection "model.transformation.fct_dex_swap"
+[0m23:31:48.320321 [debug] [Thread-1 (]: On model.transformation.fct_dex_swap: COMMIT
+[0m23:31:48.351873 [debug] [Thread-1 (]: SQL status: COMMIT in 0.014 seconds
+[0m23:31:48.372873 [debug] [Thread-1 (]: Applying DROP to: "blockchain_db"."public"."fct_dex_swap__dbt_backup"
+[0m23:31:48.462345 [debug] [Thread-1 (]: Using postgres connection "model.transformation.fct_dex_swap"
+[0m23:31:48.467335 [debug] [Thread-1 (]: On model.transformation.fct_dex_swap: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "model.transformation.fct_dex_swap"} */
+drop table if exists "blockchain_db"."public"."fct_dex_swap__dbt_backup" cascade
+[0m23:31:48.491405 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.022 seconds
+[0m23:31:48.564157 [debug] [Thread-1 (]: On model.transformation.fct_dex_swap: Close
+[0m23:31:48.606396 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2171b7ea-01f0-4fd7-a1ca-619791f998a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bb9ed80>]}
+[0m23:31:48.738221 [info ] [Thread-1 (]: 3 of 3 OK created sql table model public.fct_dex_swap .......................... [[32mSELECT 7[0m in 0.82s]
+[0m23:31:48.856823 [debug] [Thread-1 (]: Finished running node model.transformation.fct_dex_swap
+[0m23:31:48.923309 [debug] [MainThread]: On master: COMMIT
+[0m23:31:48.979733 [debug] [MainThread]: Using postgres connection "master"
+[0m23:31:48.980772 [debug] [MainThread]: On master: COMMIT
+[0m23:31:48.999490 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:31:49.347785 [debug] [MainThread]: SQL status: COMMIT in 0.359 seconds
+[0m23:31:49.353044 [debug] [MainThread]: On master: Close
+[0m23:31:49.407076 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:31:49.411849 [debug] [MainThread]: Connection 'list_blockchain_db' was properly closed.
+[0m23:31:49.412591 [debug] [MainThread]: Connection 'model.transformation.fct_dex_swap' was properly closed.
+[0m23:31:49.413758 [info ] [MainThread]: 
+[0m23:31:49.486419 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.28 seconds (5.28s).
+[0m23:31:49.559845 [debug] [MainThread]: Command end result
+[0m23:31:50.153800 [debug] [MainThread]: Wrote artifact WritableManifest to ./target/manifest.json
+[0m23:31:50.174183 [debug] [MainThread]: Wrote artifact SemanticManifest to ./target/semantic_manifest.json
+[0m23:31:50.188809 [debug] [MainThread]: Wrote artifact OsiDocument to ./target/osi_document.json
+[0m23:31:50.219545 [debug] [MainThread]: Wrote artifact RunExecutionResult to ./target/run_results.json
+[0m23:31:50.220980 [info ] [MainThread]: 
+[0m23:31:50.223037 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:31:50.227882 [info ] [MainThread]: 
+[0m23:31:50.228510 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m23:31:50.230723 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.683894, "process_in_blocks": "0", "process_kernel_time": 1.120301, "process_mem_max_rss": "138476", "process_out_blocks": "0", "process_user_time": 7.607341}
+[0m23:31:50.232983 [debug] [MainThread]: Command `dbt run` succeeded at 23:31:50.232742 after 12.69 seconds
+[0m23:31:50.234887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2e16bdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f29729bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786f2bb22240>]}
+[0m23:31:50.236359 [debug] [MainThread]: Flushing usage events
+[0m23:31:51.492519 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:32:23.875333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e27dbc80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e1a51ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e1b02930>]}
+
+
+============================== 23:32:23.887938 | ae3bfeb4-3ec4-4585-acb9-cf960330d8f5 ==============================
+[0m23:32:23.887938 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m23:32:23.893060 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'printer_width': '80', 'invocation_command': 'dbt test --profiles-dir . --project-dir .', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'static_parser': 'True', 'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'partial_parse': 'True', 'debug': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'empty': 'None', 'no_print': 'None', 'log_path': 'logs', 'warn_error': 'None', 'quiet': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'target_path': 'None'}
+[0m23:32:23.896790 [debug] [MainThread]: Tracking: tracking
+[0m23:32:24.929238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ae3bfeb4-3ec4-4585-acb9-cf960330d8f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e41fefc0>]}
+[0m23:32:25.364331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ae3bfeb4-3ec4-4585-acb9-cf960330d8f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e3ea11c0>]}
+[0m23:32:25.366032 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:32:25.924955 [debug] [MainThread]: checksum: 3743cd5af7d605e622951bf78a3cc09f8907c940085aece08167c69270a51570, vars: {}, profile: transformation, target: dev, version: 1.13.0b1
+[0m23:32:30.149563 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:32:30.162535 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:32:30.185548 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:32:30.414577 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.transformation.example
+[0m23:32:30.703903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ae3bfeb4-3ec4-4585-acb9-cf960330d8f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1dfb9cad0>]}
+[0m23:32:36.672452 [debug] [MainThread]: Wrote artifact WritableManifest to ./target/manifest.json
+[0m23:32:36.884301 [debug] [MainThread]: Wrote artifact SemanticManifest to ./target/semantic_manifest.json
+[0m23:32:37.731151 [debug] [MainThread]: Wrote artifact OsiDocument to ./target/osi_document.json
+[0m23:32:38.060128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ae3bfeb4-3ec4-4585-acb9-cf960330d8f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1debe3b30>]}
+[0m23:32:38.066150 [info ] [MainThread]: Found 3 models, 24 data tests, 1 source, 477 macros
+[0m23:32:38.073027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae3bfeb4-3ec4-4585-acb9-cf960330d8f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1dfb9f260>]}
+[0m23:32:38.170839 [info ] [MainThread]: 
+[0m23:32:38.213064 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:32:38.240569 [info ] [MainThread]: 
+[0m23:32:38.241627 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:32:38.335305 [debug] [ThreadPool]: Acquiring new postgres connection 'list_blockchain_db_public'
+[0m23:32:39.696184 [debug] [ThreadPool]: Using postgres connection "list_blockchain_db_public"
+[0m23:32:39.700901 [debug] [ThreadPool]: On list_blockchain_db_public: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "list_blockchain_db_public"} */
+select
+      'blockchain_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'blockchain_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'blockchain_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+    union all
+    select distinct
+     'blockchain_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public'
+  
+[0m23:32:39.703394 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:32:39.825157 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.122 seconds
+[0m23:32:39.830430 [debug] [ThreadPool]: On list_blockchain_db_public: ROLLBACK
+[0m23:32:39.832203 [debug] [ThreadPool]: On list_blockchain_db_public: Close
+[0m23:32:39.869913 [debug] [MainThread]: Using postgres connection "master"
+[0m23:32:39.882737 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:32:39.884614 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:32:40.071644 [debug] [MainThread]: SQL status: SELECT 2 in 0.187 seconds
+[0m23:32:40.107012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae3bfeb4-3ec4-4585-acb9-cf960330d8f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1dfb74470>]}
+[0m23:32:40.112254 [debug] [MainThread]: On master: ROLLBACK
+[0m23:32:40.129118 [debug] [MainThread]: On master: COMMIT
+[0m23:32:40.135969 [debug] [MainThread]: Using postgres connection "master"
+[0m23:32:40.151585 [debug] [MainThread]: On master: COMMIT
+[0m23:32:40.190530 [debug] [MainThread]: SQL status: COMMIT in 0.038 seconds
+[0m23:32:40.233598 [debug] [MainThread]: On master: Close
+[0m23:32:40.338995 [debug] [Thread-1 (]: Began running node test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f
+[0m23:32:40.361389 [info ] [Thread-1 (]: 1 of 24 START test accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0  [RUN]
+[0m23:32:40.367936 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_blockchain_db_public, now test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f)
+[0m23:32:40.382804 [debug] [Thread-1 (]: Began compiling node test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f
+[0m23:32:40.966301 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f"
+[0m23:32:40.980096 [debug] [Thread-1 (]: Began executing node test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f
+[0m23:32:41.814884 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f"
+[0m23:32:41.911816 [debug] [Thread-1 (]: Using postgres connection "test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f"
+[0m23:32:41.925736 [debug] [Thread-1 (]: On test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        direction as value_field,
+        count(*) as n_records
+
+    from "blockchain_db"."public"."int_dex_swap"
+    group by direction
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'token0_to_token1','token1_to_token0'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:41.926861 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:42.330899 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.404 seconds
+[0m23:32:42.465482 [debug] [Thread-1 (]: On test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f: ROLLBACK
+[0m23:32:42.478124 [debug] [Thread-1 (]: On test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f: Close
+[0m23:32:42.502027 [info ] [Thread-1 (]: 1 of 24 PASS accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0  [[32mPASS[0m in 2.13s]
+[0m23:32:42.503019 [debug] [Thread-1 (]: Finished running node test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f
+[0m23:32:42.542687 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a
+[0m23:32:42.582220 [info ] [Thread-1 (]: 2 of 24 START test not_null_int_dex_swap_amount_in ............................. [RUN]
+[0m23:32:42.598461 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.accepted_values_int_dex_swap_direction__token0_to_token1__token1_to_token0.3cb2cfc48f, now test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a)
+[0m23:32:42.599080 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a
+[0m23:32:42.842691 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a"
+[0m23:32:42.853900 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a
+[0m23:32:42.872427 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a"
+[0m23:32:42.873450 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a"
+[0m23:32:42.874044 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount_in
+from "blockchain_db"."public"."int_dex_swap"
+where amount_in is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:42.874675 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:43.079959 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.205 seconds
+[0m23:32:43.105751 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a: ROLLBACK
+[0m23:32:43.117298 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a: Close
+[0m23:32:43.133680 [info ] [Thread-1 (]: 2 of 24 PASS not_null_int_dex_swap_amount_in ................................... [[32mPASS[0m in 0.53s]
+[0m23:32:43.154546 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a
+[0m23:32:43.204436 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5
+[0m23:32:43.207672 [info ] [Thread-1 (]: 3 of 24 START test not_null_int_dex_swap_amount_out ............................ [RUN]
+[0m23:32:43.213572 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_amount_in.60ba5efc5a, now test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5)
+[0m23:32:43.226673 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5
+[0m23:32:43.469579 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5"
+[0m23:32:43.470947 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5
+[0m23:32:43.497014 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5"
+[0m23:32:43.530116 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5"
+[0m23:32:43.531806 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount_out
+from "blockchain_db"."public"."int_dex_swap"
+where amount_out is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:43.585640 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:44.263897 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.643 seconds
+[0m23:32:44.383354 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5: ROLLBACK
+[0m23:32:44.532683 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5: Close
+[0m23:32:44.623453 [info ] [Thread-1 (]: 3 of 24 PASS not_null_int_dex_swap_amount_out .................................. [[32mPASS[0m in 1.41s]
+[0m23:32:44.690920 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5
+[0m23:32:44.777527 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_direction.a127f9a474
+[0m23:32:44.779029 [info ] [Thread-1 (]: 4 of 24 START test not_null_int_dex_swap_direction ............................. [RUN]
+[0m23:32:45.074148 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_amount_out.ee4796cda5, now test.transformation.not_null_int_dex_swap_direction.a127f9a474)
+[0m23:32:45.075213 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_direction.a127f9a474
+[0m23:32:46.094723 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_direction.a127f9a474"
+[0m23:32:46.117265 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_direction.a127f9a474
+[0m23:32:46.200027 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_direction.a127f9a474"
+[0m23:32:46.446843 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_direction.a127f9a474"
+[0m23:32:46.451490 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_direction.a127f9a474: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_direction.a127f9a474"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select direction
+from "blockchain_db"."public"."int_dex_swap"
+where direction is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:46.459325 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:47.131002 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.624 seconds
+[0m23:32:47.146308 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_direction.a127f9a474: ROLLBACK
+[0m23:32:47.149522 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_direction.a127f9a474: Close
+[0m23:32:47.194750 [info ] [Thread-1 (]: 4 of 24 PASS not_null_int_dex_swap_direction ................................... [[32mPASS[0m in 2.12s]
+[0m23:32:47.211422 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_direction.a127f9a474
+[0m23:32:47.285944 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_log_index.a0a5b43336
+[0m23:32:47.294786 [info ] [Thread-1 (]: 5 of 24 START test not_null_int_dex_swap_log_index ............................. [RUN]
+[0m23:32:47.299560 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_direction.a127f9a474, now test.transformation.not_null_int_dex_swap_log_index.a0a5b43336)
+[0m23:32:47.315366 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_log_index.a0a5b43336
+[0m23:32:47.402872 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_log_index.a0a5b43336"
+[0m23:32:47.403762 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_log_index.a0a5b43336
+[0m23:32:47.441632 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_log_index.a0a5b43336"
+[0m23:32:47.452131 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_log_index.a0a5b43336"
+[0m23:32:47.468188 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_log_index.a0a5b43336: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_log_index.a0a5b43336"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select log_index
+from "blockchain_db"."public"."int_dex_swap"
+where log_index is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:47.481323 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:47.761407 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.281 seconds
+[0m23:32:47.794235 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_log_index.a0a5b43336: ROLLBACK
+[0m23:32:47.850014 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_log_index.a0a5b43336: Close
+[0m23:32:47.863492 [info ] [Thread-1 (]: 5 of 24 PASS not_null_int_dex_swap_log_index ................................... [[32mPASS[0m in 0.56s]
+[0m23:32:47.881340 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_log_index.a0a5b43336
+[0m23:32:47.898755 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389
+[0m23:32:47.940127 [info ] [Thread-1 (]: 6 of 24 START test not_null_int_dex_swap_price_token1_per_token0 ............... [RUN]
+[0m23:32:47.942361 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_log_index.a0a5b43336, now test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389)
+[0m23:32:48.017231 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389
+[0m23:32:48.266930 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389"
+[0m23:32:48.293719 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389
+[0m23:32:48.347344 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389"
+[0m23:32:48.368918 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389"
+[0m23:32:48.371967 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select price_token1_per_token0
+from "blockchain_db"."public"."int_dex_swap"
+where price_token1_per_token0 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:48.385953 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:48.903037 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.517 seconds
+[0m23:32:48.978034 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389: ROLLBACK
+[0m23:32:49.042300 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389: Close
+[0m23:32:49.115906 [info ] [Thread-1 (]: 6 of 24 PASS not_null_int_dex_swap_price_token1_per_token0 ..................... [[32mPASS[0m in 1.17s]
+[0m23:32:49.159354 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389
+[0m23:32:49.194437 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd
+[0m23:32:49.287686 [info ] [Thread-1 (]: 7 of 24 START test not_null_int_dex_swap_token_in_symbol ....................... [RUN]
+[0m23:32:49.350961 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_price_token1_per_token0.8c29ec7389, now test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd)
+[0m23:32:49.387113 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd
+[0m23:32:50.120178 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd"
+[0m23:32:50.193160 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd
+[0m23:32:50.382348 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd"
+[0m23:32:50.470224 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd"
+[0m23:32:50.494702 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select token_in_symbol
+from "blockchain_db"."public"."int_dex_swap"
+where token_in_symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:50.506971 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:51.045130 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.538 seconds
+[0m23:32:51.086527 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd: ROLLBACK
+[0m23:32:51.090485 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd: Close
+[0m23:32:51.100136 [info ] [Thread-1 (]: 7 of 24 PASS not_null_int_dex_swap_token_in_symbol ............................. [[32mPASS[0m in 1.81s]
+[0m23:32:51.150577 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd
+[0m23:32:51.155270 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30
+[0m23:32:51.161647 [info ] [Thread-1 (]: 8 of 24 START test not_null_int_dex_swap_token_out_symbol ...................... [RUN]
+[0m23:32:51.183706 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_token_in_symbol.d0fb75f6dd, now test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30)
+[0m23:32:51.193672 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30
+[0m23:32:51.330615 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30"
+[0m23:32:51.393914 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30
+[0m23:32:51.446833 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30"
+[0m23:32:51.453839 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30"
+[0m23:32:51.552945 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select token_out_symbol
+from "blockchain_db"."public"."int_dex_swap"
+where token_out_symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:51.558526 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:51.778930 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.220 seconds
+[0m23:32:51.802143 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30: ROLLBACK
+[0m23:32:51.805681 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30: Close
+[0m23:32:51.838544 [info ] [Thread-1 (]: 8 of 24 PASS not_null_int_dex_swap_token_out_symbol ............................ [[32mPASS[0m in 0.65s]
+[0m23:32:51.853184 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30
+[0m23:32:51.877937 [debug] [Thread-1 (]: Began running node test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6
+[0m23:32:51.886180 [info ] [Thread-1 (]: 9 of 24 START test not_null_int_dex_swap_tx_hash ............................... [RUN]
+[0m23:32:51.922786 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_token_out_symbol.07eeb76c30, now test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6)
+[0m23:32:51.976744 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6
+[0m23:32:52.233305 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6"
+[0m23:32:52.253360 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6
+[0m23:32:52.268213 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6"
+[0m23:32:52.272385 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6"
+[0m23:32:52.289917 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tx_hash
+from "blockchain_db"."public"."int_dex_swap"
+where tx_hash is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:52.291249 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:52.472367 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.181 seconds
+[0m23:32:52.493994 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6: ROLLBACK
+[0m23:32:52.505717 [debug] [Thread-1 (]: On test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6: Close
+[0m23:32:52.524889 [info ] [Thread-1 (]: 9 of 24 PASS not_null_int_dex_swap_tx_hash ..................................... [[32mPASS[0m in 0.61s]
+[0m23:32:52.529463 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6
+[0m23:32:52.533572 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66
+[0m23:32:52.544924 [info ] [Thread-1 (]: 10 of 24 START test not_null_stg_dex_swap_amount0 .............................. [RUN]
+[0m23:32:52.549559 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_int_dex_swap_tx_hash.062dc6d5b6, now test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66)
+[0m23:32:52.563790 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66
+[0m23:32:52.647167 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66"
+[0m23:32:52.701144 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66
+[0m23:32:52.739665 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66"
+[0m23:32:52.843434 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66"
+[0m23:32:52.867974 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount0
+from "blockchain_db"."public"."stg_dex_swap"
+where amount0 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:52.870730 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:53.055644 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.185 seconds
+[0m23:32:53.069063 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66: ROLLBACK
+[0m23:32:53.071444 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66: Close
+[0m23:32:53.087164 [info ] [Thread-1 (]: 10 of 24 PASS not_null_stg_dex_swap_amount0 .................................... [[32mPASS[0m in 0.52s]
+[0m23:32:53.100058 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66
+[0m23:32:53.101660 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1
+[0m23:32:53.103648 [info ] [Thread-1 (]: 11 of 24 START test not_null_stg_dex_swap_amount0_raw .......................... [RUN]
+[0m23:32:53.117062 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_amount0.ae5b296b66, now test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1)
+[0m23:32:53.118319 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1
+[0m23:32:53.240028 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1"
+[0m23:32:53.255071 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1
+[0m23:32:53.271474 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1"
+[0m23:32:53.294899 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1"
+[0m23:32:53.299095 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount0_raw
+from "blockchain_db"."public"."stg_dex_swap"
+where amount0_raw is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:53.304034 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:53.376065 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.072 seconds
+[0m23:32:53.378497 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1: ROLLBACK
+[0m23:32:53.391250 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1: Close
+[0m23:32:53.394346 [info ] [Thread-1 (]: 11 of 24 PASS not_null_stg_dex_swap_amount0_raw ................................ [[32mPASS[0m in 0.28s]
+[0m23:32:53.411637 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1
+[0m23:32:53.437803 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_amount1.1a346c176f
+[0m23:32:53.441314 [info ] [Thread-1 (]: 12 of 24 START test not_null_stg_dex_swap_amount1 .............................. [RUN]
+[0m23:32:53.486241 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_amount0_raw.3d58ffe1f1, now test.transformation.not_null_stg_dex_swap_amount1.1a346c176f)
+[0m23:32:53.486896 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_amount1.1a346c176f
+[0m23:32:53.589673 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_amount1.1a346c176f"
+[0m23:32:53.604031 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_amount1.1a346c176f
+[0m23:32:53.666702 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_amount1.1a346c176f"
+[0m23:32:53.674220 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_amount1.1a346c176f"
+[0m23:32:53.694673 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount1.1a346c176f: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_amount1.1a346c176f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount1
+from "blockchain_db"."public"."stg_dex_swap"
+where amount1 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:53.696026 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:53.862631 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.158 seconds
+[0m23:32:53.899602 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount1.1a346c176f: ROLLBACK
+[0m23:32:53.912111 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount1.1a346c176f: Close
+[0m23:32:54.062749 [info ] [Thread-1 (]: 12 of 24 PASS not_null_stg_dex_swap_amount1 .................................... [[32mPASS[0m in 0.52s]
+[0m23:32:54.157119 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_amount1.1a346c176f
+[0m23:32:54.189667 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc
+[0m23:32:54.233786 [info ] [Thread-1 (]: 13 of 24 START test not_null_stg_dex_swap_amount1_raw .......................... [RUN]
+[0m23:32:54.234453 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_amount1.1a346c176f, now test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc)
+[0m23:32:54.234953 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc
+[0m23:32:54.440495 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc"
+[0m23:32:54.462254 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc
+[0m23:32:54.494242 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc"
+[0m23:32:54.503425 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc"
+[0m23:32:54.531814 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount1_raw
+from "blockchain_db"."public"."stg_dex_swap"
+where amount1_raw is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:54.536189 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:54.667739 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.132 seconds
+[0m23:32:54.695274 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc: ROLLBACK
+[0m23:32:54.712912 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc: Close
+[0m23:32:54.766791 [info ] [Thread-1 (]: 13 of 24 PASS not_null_stg_dex_swap_amount1_raw ................................ [[32mPASS[0m in 0.51s]
+[0m23:32:54.767968 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc
+[0m23:32:54.788561 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_block_number.85f884d98e
+[0m23:32:54.795153 [info ] [Thread-1 (]: 14 of 24 START test not_null_stg_dex_swap_block_number ......................... [RUN]
+[0m23:32:54.799123 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_amount1_raw.b6f39115fc, now test.transformation.not_null_stg_dex_swap_block_number.85f884d98e)
+[0m23:32:54.812418 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_block_number.85f884d98e
+[0m23:32:54.887542 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_block_number.85f884d98e"
+[0m23:32:54.900316 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_block_number.85f884d98e
+[0m23:32:54.937012 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_block_number.85f884d98e"
+[0m23:32:54.948309 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_block_number.85f884d98e"
+[0m23:32:54.967982 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_block_number.85f884d98e: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_block_number.85f884d98e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select block_number
+from "blockchain_db"."public"."stg_dex_swap"
+where block_number is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:54.977228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:55.105844 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.129 seconds
+[0m23:32:55.136065 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_block_number.85f884d98e: ROLLBACK
+[0m23:32:55.141844 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_block_number.85f884d98e: Close
+[0m23:32:55.146573 [info ] [Thread-1 (]: 14 of 24 PASS not_null_stg_dex_swap_block_number ............................... [[32mPASS[0m in 0.35s]
+[0m23:32:55.164215 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_block_number.85f884d98e
+[0m23:32:55.169637 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa
+[0m23:32:55.193507 [info ] [Thread-1 (]: 15 of 24 START test not_null_stg_dex_swap_block_timestamp ...................... [RUN]
+[0m23:32:55.194309 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_block_number.85f884d98e, now test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa)
+[0m23:32:55.194844 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa
+[0m23:32:55.299407 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa"
+[0m23:32:55.309850 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa
+[0m23:32:55.315768 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa"
+[0m23:32:55.334803 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa"
+[0m23:32:55.345981 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select block_timestamp
+from "blockchain_db"."public"."stg_dex_swap"
+where block_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:55.346658 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:55.502925 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.156 seconds
+[0m23:32:55.555488 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa: ROLLBACK
+[0m23:32:55.584913 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa: Close
+[0m23:32:55.596391 [info ] [Thread-1 (]: 15 of 24 PASS not_null_stg_dex_swap_block_timestamp ............................ [[32mPASS[0m in 0.40s]
+[0m23:32:55.629276 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa
+[0m23:32:55.635234 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6
+[0m23:32:55.641105 [info ] [Thread-1 (]: 16 of 24 START test not_null_stg_dex_swap_liquidity ............................ [RUN]
+[0m23:32:55.652244 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_block_timestamp.9bac63b2fa, now test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6)
+[0m23:32:55.665974 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6
+[0m23:32:55.767714 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6"
+[0m23:32:55.782478 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6
+[0m23:32:55.806994 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6"
+[0m23:32:55.817417 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6"
+[0m23:32:55.826483 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select liquidity
+from "blockchain_db"."public"."stg_dex_swap"
+where liquidity is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:55.837351 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:55.947837 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.110 seconds
+[0m23:32:55.979893 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6: ROLLBACK
+[0m23:32:56.000624 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6: Close
+[0m23:32:56.045370 [info ] [Thread-1 (]: 16 of 24 PASS not_null_stg_dex_swap_liquidity .................................. [[32mPASS[0m in 0.39s]
+[0m23:32:56.074814 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6
+[0m23:32:56.161152 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3
+[0m23:32:56.202633 [info ] [Thread-1 (]: 17 of 24 START test not_null_stg_dex_swap_log_index ............................ [RUN]
+[0m23:32:56.255480 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_liquidity.8c4dde05b6, now test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3)
+[0m23:32:56.274697 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3
+[0m23:32:56.681763 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3"
+[0m23:32:56.737449 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3
+[0m23:32:56.768103 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3"
+[0m23:32:56.790883 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3"
+[0m23:32:56.793207 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select log_index
+from "blockchain_db"."public"."stg_dex_swap"
+where log_index is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:56.796350 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:56.883154 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.085 seconds
+[0m23:32:56.940122 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3: ROLLBACK
+[0m23:32:56.956389 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3: Close
+[0m23:32:56.974562 [info ] [Thread-1 (]: 17 of 24 PASS not_null_stg_dex_swap_log_index .................................. [[32mPASS[0m in 0.72s]
+[0m23:32:56.992822 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3
+[0m23:32:56.998021 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe
+[0m23:32:57.004937 [info ] [Thread-1 (]: 18 of 24 START test not_null_stg_dex_swap_pool_address ......................... [RUN]
+[0m23:32:57.029803 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_log_index.5ea26232b3, now test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe)
+[0m23:32:57.033203 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe
+[0m23:32:57.104710 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe"
+[0m23:32:57.109352 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe
+[0m23:32:57.118462 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe"
+[0m23:32:57.133257 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe"
+[0m23:32:57.134498 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select pool_address
+from "blockchain_db"."public"."stg_dex_swap"
+where pool_address is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:57.142228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:57.327885 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.191 seconds
+[0m23:32:57.365172 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe: ROLLBACK
+[0m23:32:57.393038 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe: Close
+[0m23:32:57.443039 [info ] [Thread-1 (]: 18 of 24 PASS not_null_stg_dex_swap_pool_address ............................... [[32mPASS[0m in 0.43s]
+[0m23:32:57.447535 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe
+[0m23:32:57.455212 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284
+[0m23:32:57.475444 [info ] [Thread-1 (]: 19 of 24 START test not_null_stg_dex_swap_recipient ............................ [RUN]
+[0m23:32:57.502917 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_pool_address.805df6c9fe, now test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284)
+[0m23:32:57.511479 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284
+[0m23:32:57.612845 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284"
+[0m23:32:57.650622 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284
+[0m23:32:57.739852 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284"
+[0m23:32:57.755635 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284"
+[0m23:32:57.760045 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select recipient
+from "blockchain_db"."public"."stg_dex_swap"
+where recipient is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:57.770447 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:58.019075 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.249 seconds
+[0m23:32:58.023549 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284: ROLLBACK
+[0m23:32:58.049978 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284: Close
+[0m23:32:58.087529 [info ] [Thread-1 (]: 19 of 24 PASS not_null_stg_dex_swap_recipient .................................. [[32mPASS[0m in 0.57s]
+[0m23:32:58.106614 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284
+[0m23:32:58.108208 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_sender.d6ad12039e
+[0m23:32:58.166335 [info ] [Thread-1 (]: 20 of 24 START test not_null_stg_dex_swap_sender ............................... [RUN]
+[0m23:32:58.171466 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_recipient.e5cce6f284, now test.transformation.not_null_stg_dex_swap_sender.d6ad12039e)
+[0m23:32:58.185416 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_sender.d6ad12039e
+[0m23:32:58.556986 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_sender.d6ad12039e"
+[0m23:32:58.577149 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_sender.d6ad12039e
+[0m23:32:58.642256 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_sender.d6ad12039e"
+[0m23:32:58.649384 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_sender.d6ad12039e"
+[0m23:32:58.691793 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_sender.d6ad12039e: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_sender.d6ad12039e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sender
+from "blockchain_db"."public"."stg_dex_swap"
+where sender is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:32:58.696987 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:59.039471 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.342 seconds
+[0m23:32:59.129883 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_sender.d6ad12039e: ROLLBACK
+[0m23:32:59.135114 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_sender.d6ad12039e: Close
+[0m23:32:59.196322 [info ] [Thread-1 (]: 20 of 24 PASS not_null_stg_dex_swap_sender ..................................... [[32mPASS[0m in 1.03s]
+[0m23:32:59.233453 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_sender.d6ad12039e
+[0m23:32:59.244268 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012
+[0m23:32:59.248977 [info ] [Thread-1 (]: 21 of 24 START test not_null_stg_dex_swap_sqrt_price_x96 ....................... [RUN]
+[0m23:32:59.261343 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_sender.d6ad12039e, now test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012)
+[0m23:32:59.276949 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012
+[0m23:33:03.578128 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012"
+[0m23:33:03.621077 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012
+[0m23:33:03.865511 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012"
+[0m23:33:03.914049 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012"
+[0m23:33:04.172264 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sqrt_price_x96
+from "blockchain_db"."public"."stg_dex_swap"
+where sqrt_price_x96 is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:33:04.190322 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:33:05.051596 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.861 seconds
+[0m23:33:05.189238 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012: ROLLBACK
+[0m23:33:05.267309 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012: Close
+[0m23:33:05.377539 [info ] [Thread-1 (]: 21 of 24 PASS not_null_stg_dex_swap_sqrt_price_x96 ............................. [[32mPASS[0m in 6.11s]
+[0m23:33:05.400634 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012
+[0m23:33:05.427200 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_tick.cabcb59406
+[0m23:33:05.608850 [info ] [Thread-1 (]: 22 of 24 START test not_null_stg_dex_swap_tick ................................. [RUN]
+[0m23:33:05.625120 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_sqrt_price_x96.469e479012, now test.transformation.not_null_stg_dex_swap_tick.cabcb59406)
+[0m23:33:05.626188 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_tick.cabcb59406
+[0m23:33:05.931481 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_tick.cabcb59406"
+[0m23:33:05.937562 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_tick.cabcb59406
+[0m23:33:05.945917 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_tick.cabcb59406"
+[0m23:33:05.946873 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_tick.cabcb59406"
+[0m23:33:05.956750 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tick.cabcb59406: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_tick.cabcb59406"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tick
+from "blockchain_db"."public"."stg_dex_swap"
+where tick is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:33:05.958471 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:33:06.351862 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.394 seconds
+[0m23:33:06.472814 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tick.cabcb59406: ROLLBACK
+[0m23:33:06.491512 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tick.cabcb59406: Close
+[0m23:33:06.537299 [info ] [Thread-1 (]: 22 of 24 PASS not_null_stg_dex_swap_tick ....................................... [[32mPASS[0m in 0.90s]
+[0m23:33:06.558420 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_tick.cabcb59406
+[0m23:33:06.577480 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc
+[0m23:33:06.615466 [info ] [Thread-1 (]: 23 of 24 START test not_null_stg_dex_swap_tx_hash .............................. [RUN]
+[0m23:33:06.680525 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_tick.cabcb59406, now test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc)
+[0m23:33:06.705046 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc
+[0m23:33:06.921212 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc"
+[0m23:33:06.932689 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc
+[0m23:33:06.976480 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc"
+[0m23:33:06.985987 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc"
+[0m23:33:06.986959 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tx_hash
+from "blockchain_db"."public"."stg_dex_swap"
+where tx_hash is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:33:07.000468 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:33:07.235431 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.234 seconds
+[0m23:33:07.270991 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc: ROLLBACK
+[0m23:33:07.288191 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc: Close
+[0m23:33:07.300613 [info ] [Thread-1 (]: 23 of 24 PASS not_null_stg_dex_swap_tx_hash .................................... [[32mPASS[0m in 0.62s]
+[0m23:33:07.320752 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc
+[0m23:33:07.373448 [debug] [Thread-1 (]: Began running node test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d
+[0m23:33:07.382453 [info ] [Thread-1 (]: 24 of 24 START test not_null_stg_dex_swap_tx_index ............................. [RUN]
+[0m23:33:07.401239 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.transformation.not_null_stg_dex_swap_tx_hash.1b67f9e3dc, now test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d)
+[0m23:33:07.426637 [debug] [Thread-1 (]: Began compiling node test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d
+[0m23:33:07.656670 [debug] [Thread-1 (]: Writing injected SQL for node "test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d"
+[0m23:33:07.668052 [debug] [Thread-1 (]: Began executing node test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d
+[0m23:33:07.693834 [debug] [Thread-1 (]: Writing runtime sql for node "test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d"
+[0m23:33:07.718032 [debug] [Thread-1 (]: Using postgres connection "test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d"
+[0m23:33:07.780972 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "transformation", "target_name": "dev", "node_id": "test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tx_index
+from "blockchain_db"."public"."stg_dex_swap"
+where tx_index is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:33:07.809331 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:33:08.418177 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.623 seconds
+[0m23:33:08.531788 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d: ROLLBACK
+[0m23:33:08.593940 [debug] [Thread-1 (]: On test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d: Close
+[0m23:33:08.727257 [info ] [Thread-1 (]: 24 of 24 PASS not_null_stg_dex_swap_tx_index ................................... [[32mPASS[0m in 1.33s]
+[0m23:33:08.800839 [debug] [Thread-1 (]: Finished running node test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d
+[0m23:33:08.922671 [debug] [MainThread]: On master: COMMIT
+[0m23:33:08.949589 [debug] [MainThread]: Using postgres connection "master"
+[0m23:33:09.001023 [debug] [MainThread]: On master: COMMIT
+[0m23:33:09.025466 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:33:09.382957 [debug] [MainThread]: SQL status: COMMIT in 0.357 seconds
+[0m23:33:09.404318 [debug] [MainThread]: On master: Close
+[0m23:33:09.458084 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:33:09.499608 [debug] [MainThread]: Connection 'test.transformation.not_null_stg_dex_swap_tx_index.8df1d0f93d' was properly closed.
+[0m23:33:09.539259 [info ] [MainThread]: 
+[0m23:33:09.610314 [info ] [MainThread]: Finished running 24 data tests in 0 hours 0 minutes and 31.28 seconds (31.28s).
+[0m23:33:09.922297 [debug] [MainThread]: Command end result
+[0m23:33:11.909865 [debug] [MainThread]: Wrote artifact WritableManifest to ./target/manifest.json
+[0m23:33:12.132502 [debug] [MainThread]: Wrote artifact SemanticManifest to ./target/semantic_manifest.json
+[0m23:33:12.302998 [debug] [MainThread]: Wrote artifact OsiDocument to ./target/osi_document.json
+[0m23:33:12.835751 [debug] [MainThread]: Wrote artifact RunExecutionResult to ./target/run_results.json
+[0m23:33:12.852415 [info ] [MainThread]: 
+[0m23:33:12.853723 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:33:12.855290 [info ] [MainThread]: 
+[0m23:33:12.856007 [info ] [MainThread]: Done. PASS=24 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=24
+[0m23:33:12.861298 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 43.825565, "process_in_blocks": "0", "process_kernel_time": 1.767494, "process_mem_max_rss": "140152", "process_out_blocks": "0", "process_user_time": 9.696206}
+[0m23:33:12.866710 [debug] [MainThread]: Command `dbt test` succeeded at 23:33:12.866283 after 43.83 seconds
+[0m23:33:12.872320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e2357ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1e5b3b3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d1dfb071d0>]}
+[0m23:33:12.877146 [debug] [MainThread]: Flushing usage events
+[0m23:33:16.355112 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:21:52.346777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b1db88a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b1db7cf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b1dbc5210>]}
+
+
+============================== 10:21:52.363385 | fa1d6972-5027-49fa-b03c-e5153e526ccf ==============================
+[0m10:21:52.363385 [info ] [MainThread]: Running with dbt=1.11.12
+[0m10:21:52.365354 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_cache_events': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'invocation_command': 'dbt ', 'warn_error': 'None', 'log_path': '/home/freeman/Data-Engineering-Curriculum/Curriculum/05-orchestration/_Transformation/logs', 'printer_width': '80', 'use_experimental_parser': 'False', 'profiles_dir': '/home/freeman/Data-Engineering-Curriculum/Curriculum/05-orchestration/_Transformation', 'indirect_selection': 'eager', 'fail_fast': 'False', 'cache_selected_only': 'False', 'partial_parse': 'True', 'debug': 'False', 'introspect': 'True', 'target_path': 'None', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'use_colors': 'True'}
+[0m10:21:52.603804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fa1d6972-5027-49fa-b03c-e5153e526ccf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b1db0ea90>]}
+[0m10:21:52.641473 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:21:52.647435 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:21:52.650558 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.42775574, "process_in_blocks": "0", "process_kernel_time": 1.017762, "process_mem_max_rss": "126016", "process_out_blocks": "0", "process_user_time": 5.625847}
+[0m10:21:52.652303 [debug] [MainThread]: Command `cli deps` succeeded at 10:21:52.651995 after 0.43 seconds
+[0m10:21:52.653333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b1dccaa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b1db8a2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x738b22977f90>]}
+[0m10:21:52.664486 [debug] [MainThread]: Flushing usage events
+[0m10:21:54.351755 [debug] [MainThread]: An error was encountered while trying to flush usage events

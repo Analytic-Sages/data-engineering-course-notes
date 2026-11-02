@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fct_dex_trades
+    description: >
+      One row per Uniswap V3 swap — the fact exposed at its NATURAL GRAIN.
+      Design: this mart deliberately performs NO aggregation. The end user
+      (analyst / BI tool) owns aggregation and writes SQL on top of this table;
+      per-day, per-wallet, per-price cuts are their choice, not ours.
+      Built as pass-through of int_dex_swaps (direction, signed in/out amounts
+      and the sqrtPriceX96 price decode are done in intermediate).
+    columns:
+      - name: tx_hash
+        description: Transaction hash that emitted the Swap (lowercase hex).
+        tests:
+          - not_null
+      - name: log_index
+        description: >
+          Log position within the transaction. With tx_hash forms the
+          natural key of the fact — one row per swap.
+        tests:
+          - not_null
+      - name: pool_address
+        description: Uniswap V3 pool the swap occurred in (lowercase hex).
+        tests:
+          - not_null
+      - name: block_number
+        description: Block the swap was mined in.
+        tests:
+          - not_null
+      - name: sender
+        description: Swap initiator (indexed param; may be a router contract).
+        tests:
+          - not_null
+      - name: recipient
+        description: Swap output recipient (indexed param; may be a router contract).
+        tests:
+          - not_null
+      - name: direction
+        description: Trade direction — 'token0_to_token1' or 'token1_to_token0'.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['token0_to_token1', 'token1_to_token0']
+      - name: amount_in
+        description: Always-positive amount of token_in_symbol (human units).
+        tests:
+          - not_null
+      - name: amount_out
+        description: Always-positive amount of token_out_symbol (human units).
+        tests:
+          - not_null
+      - name: price_token1_per_token0
+        description: Pool price at execution (USDC per DAI for the default pool).
+        tests:
+          - not_null

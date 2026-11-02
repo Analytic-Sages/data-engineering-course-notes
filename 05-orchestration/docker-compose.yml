@@ -1,0 +1,226 @@
+# Services: apiserver (UI :8080), scheduler, dag-processor, triggerer, init, cli.
+# Metadata DB: dedicated `postgres` service below (db: airflow).
+# Blockchain data DB: `postgres-blockchain` service below (db: blockchain_db) —
+# the Module 4/5/6 pipeline target, provisioned in this same compose project.
+# All services share the default network, so tasks reach it by service name.
+#
+# Run:
+#   docker compose up -d --build
+#   UI at http://localhost:8080  (admin / admin)
+
+x-airflow-common: &airflow-common
+  build: .
+  env_file:
+    - ${ENV_FILE_PATH:-.env}
+  environment:
+    # Force the container AIRFLOW_HOME so the dags/logs mounts (/opt/airflow/*)
+    # are honoured even if .env carries the legacy AIRFLOW_HOME=./airflow_home
+    &airflow-common-env
+    AIRFLOW_HOME: /opt/airflow
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:-}
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__EXECUTION_API_SERVER_URL: "http://airflow-apiserver:8080/execution/"
+    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
+    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    # Extract Uses it
+    DATABASE_URL: postgresql://postgres:postgres@postgres-blockchain:5432/blockchain_db
+    DB_HOST: postgres-blockchain
+    DB_PORT: 5432
+    DB_USER: postgres
+    DB_PASSWORD: postgres
+    DB_NAME: blockchain_db
+    # Mounted dbt project — see volumes below
+    DBT_PROJECT_DIR: /opt/airflow/dbt_project
+    # RPC 
+    WEB3_RPC_URL: https://mainnet.infura.io/v3/0179c83f73144d9eb1216769ae3f8881
+
+  volumes:
+    - ${AIRFLOW_PROJ_DIR:-.}/Orchestration/dags:/opt/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-.}/_Extract:/opt/airflow/Extract
+    - ${AIRFLOW_PROJ_DIR:-.}/Orchestration/logs:/opt/airflow/logs
+    - ${AIRFLOW_PROJ_DIR:-.}/Orchestration/config:/opt/airflow/config
+    - ${AIRFLOW_PROJ_DIR:-.}/Orchestration/plugins:/opt/airflow/plugins
+    - ${AIRFLOW_PROJ_DIR:-.}/_Transformation:/opt/airflow/dbt_project
+  networks:
+    - default
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on: &airflow-common-depends-on
+    postgres:
+      condition: service_healthy
+    # Pipeline data DB (Module 4/5/6) — must be accepting connections before
+    # any Airflow component starts (DAG tasks read DATABASE_URL/DB_*).
+    postgres-blockchain:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "airflow" ]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  # Blockchain data DB — the Module 4 pipeline target, provisioned here so the
+  # Airflow stack and its DAGs share one compose project (no external network).
+  # Service name = hostname: tasks reach it as postgres-blockchain:5432, which
+  # matches DATABASE_URL / DB_* in x-airflow-common above.
+  # Schema is created by the pipeline itself (CREATE TABLE IF NOT EXISTS in
+  # pipeline/load_to_postgres.py) and by dbt — an empty DB is fine.
+  postgres-blockchain:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: blockchain_db
+    volumes:
+      - blockchain-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d blockchain_db" ]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  airflow-apiserver:
+    <<: *airflow-common
+    command: api-server
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8080/api/v2/version" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: always
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8974/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: always
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-dag-processor:
+    <<: *airflow-common
+    command: dag-processor
+    healthcheck:
+      test:
+        - "CMD-SHELL"
+        - "airflow jobs check --job-type DagProcessorJob --hostname \"$${HOSTNAME}\""
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: always
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-triggerer:
+    <<: *airflow-common
+    command: triggerer
+    healthcheck:
+      test:
+        - "CMD-SHELL"
+        - "airflow jobs check --job-type TriggererJob --hostname \"$${HOSTNAME}\""
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: always
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    # yamllint disable rule:line-length
+    command:
+      - -c
+      - |
+        if [[ -z "${AIRFLOW_UID}" ]]; then
+          echo
+          echo -e "\033[1;33mWARNING!!!: AIRFLOW_UID not set!\e[0m"
+          echo "If you are on Linux, you SHOULD follow the instructions below to set "
+          echo "AIRFLOW_UID environment variable, otherwise files will be owned by root."
+          echo "For other operating systems you can get rid of the warning with manually created .env file:"
+          echo "    See: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#setting-the-right-airflow-user"
+          echo
+          export AIRFLOW_UID=$$(id -u)
+        fi
+        echo
+        echo "Creating missing opt dirs if missing:"
+        echo
+        mkdir -v -p /opt/airflow/{logs,dags,pipeline,Extract,plugins,config}
+        echo
+        echo "Airflow version:"
+        /entrypoint airflow version
+        echo
+        echo "Running airflow config list to create default config file if missing."
+        echo
+        /entrypoint airflow config list >/dev/null
+        echo
+        echo "Change ownership of files in shared volumes to ${AIRFLOW_UID}:0"
+        echo
+        chown -v -R "${AIRFLOW_UID}:0" /opt/airflow/{logs,dags,pipeline,Extract,plugins,config}
+        echo
+        echo "Files in shared volumes:"
+        echo
+        ls -la /opt/airflow/{logs,dags,pipeline,Extract,plugins,config}
+    # yamllint enable rule:line-length
+    env_file:
+      - ${ENV_FILE_PATH:-.env}
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_MIGRATE: "true"
+      _AIRFLOW_WWW_USER_CREATE: "true"
+      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-admin}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-admin}
+      _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    user: "0:0"
+
+  airflow-cli:
+    <<: *airflow-common
+    profiles:
+      - debug
+    environment:
+      <<: *airflow-common-env
+      CONNECTION_CHECK_MAX_COUNT: "0"
+    command:
+      - bash
+      - -c
+      - airflow
+    depends_on:
+      <<: *airflow-common-depends-on
+
+volumes:
+  postgres-db-volume:
+  blockchain-db-volume:

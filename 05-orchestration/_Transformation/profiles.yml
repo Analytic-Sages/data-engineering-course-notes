@@ -1,0 +1,12 @@
+transformation:
+  outputs:
+    dev:
+      dbname: blockchain_db
+      host: postgres-blockchain
+      pass: postgres
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev

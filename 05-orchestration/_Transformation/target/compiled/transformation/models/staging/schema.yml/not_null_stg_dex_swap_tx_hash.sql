@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select tx_hash
+from "blockchain_db"."public"."stg_dex_swap"
+where tx_hash is null
+
+

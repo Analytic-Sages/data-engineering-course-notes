@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: blockchain
+    description: >
+      Raw blockchain datafrom PostgreSQL loader.
+      Staging is the ONLY layer allowed to read from these raw tables.
+    schema: public
+    tables:
+      - name: pool_swaps
+        description: >
+         table containing Uniswap V3 swap events.
+        columns:
+          - name: tx_hash
+            description: Transaction hash that emitted this event (lowercase hex).
+          - name: pool_address
+            description: Address of the pool in which this swap occurred (lowercase hex).
+          - name: block_number
+            description: Block in which this event was mined.
+          - name: block_timestamps
+            description: Timestamp of the block in which this event was mined.
+          - name: sender
+            description: Sender address (lowercase).
+          - name: reciepient
+            description: Receiver address (lowercase).
+          - name: amount0_raw
+            description: Raw token units transferred (not scaled by decimals).
+          - name: amount1_raw
+            description: Raw token units transferred (not scaled by decimals).
+          - name: liquidity
+            description: Amount of liquidity in the pool after the swap.
+          - name: sqrt_price_x96
+            description: Square root of the price after the swap, scaled by 2^96.
+          - name: tick
+            description: Tick after the swap.
+            
