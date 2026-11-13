@@ -37,8 +37,6 @@ docker compose up -d --build
 
 Open <http://localhost:8080>, log in with `admin` / `admin`.
 
-
-```
 ```
 ## Submit
 
