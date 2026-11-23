@@ -1,4 +1,4 @@
-# Batch Processing with Apache Spark — Assignment
+# Batch Processing with Apache Spark - Assignment
 
 ## Objective
 
